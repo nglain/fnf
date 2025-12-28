@@ -1,0 +1,29 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.8" name="daniel-winter" folder="stages/mall/" startCamPosY="450" startCamPosX="500">
+	<!-- Winter background -->
+	<sprite name="bg" x="-1380" y="-620" sprite="bgWalls" scale="0.8" scroll="0.2"/>
+
+	<!-- Christmas tree -->
+	<sprite name="tree" x="370" y="-250" sprite="christmasTree" scroll="0.4"/>
+
+	<!-- Snow on foreground -->
+	<sprite name="fgSnow" x="-600" y="680" sprite="fgSnow"/>
+
+	<!-- Dancing crowd at top -->
+	<high-memory>
+		<sprite name="upperBoppers" x="-400" y="-60" sprite="upperBop" scale="0.85" scroll="0.33" type="onbeat" beatInterval="1"/>
+	</high-memory>
+
+	<!-- Dancing crowd at bottom -->
+	<sprite name="bottomBoppers" x="-297" y="120" sprite="bottomBop" scroll="0.9" type="onbeat" beatInterval="1"/>
+
+	<!-- Santa! -->
+	<high-memory>
+		<sprite name="santa" x="-840" y="150" sprite="santa" type="onbeat" beatInterval="1"/>
+	</high-memory>
+
+	<!-- Characters -->
+	<girlfriend x="540" y="110"/>
+	<dad/>
+	<boyfriend x="1030" camyoffset="-150" camxoffset="-150"/>
+</stage>

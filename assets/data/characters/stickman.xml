@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character y="350" sprite="stickman" flipX="true" isPlayer="true" icon="stickman" color="#FFFFFF">
+	<anim name="idle" anim="stickman idle" x="0" y="0" fps="12" loop="true"/>
+	<anim name="singUP" anim="stickman singUP" x="0" y="-20" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="stickman singLEFT" x="20" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="stickman singRIGHT" x="-20" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="stickman singDOWN" x="0" y="20" fps="24" loop="false"/>
+</character>

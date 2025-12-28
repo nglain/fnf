@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-week-character>
+<character sprite="stickman" scale="0.5" flipX="false">
+    <anim name="idle" anim="stickman idle" fps="12" loop="true"/>
+</character>

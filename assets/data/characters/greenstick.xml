@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character y="350" sprite="greenstick" flipX="false" isPlayer="false" icon="greenstick" color="#00FF00">
+	<anim name="idle" anim="greenstick idle" x="0" y="0" fps="12" loop="true"/>
+	<anim name="singUP" anim="greenstick singUP" x="0" y="-20" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="greenstick singLEFT" x="20" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="greenstick singRIGHT" x="-20" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="greenstick singDOWN" x="0" y="20" fps="24" loop="false"/>
+</character>

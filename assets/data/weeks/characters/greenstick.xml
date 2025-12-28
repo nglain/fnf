@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-week-character>
+<character sprite="greenstick" scale="0.5" flipX="false">
+    <anim name="idle" anim="greenstick idle" fps="12" loop="true"/>
+</character>

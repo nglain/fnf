@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character y="50" sprite="kaufmo" flipX="false" isPlayer="false" isGF="true" icon="kaufmo" color="#F5D547" scrollFactor="0.95">
+	<anim name="danceLeft" anim="kaufmo idle" indices="0" x="0" y="0" fps="12" loop="false"/>
+	<anim name="danceRight" anim="kaufmo idle" indices="1" x="0" y="0" fps="12" loop="false"/>
+</character>

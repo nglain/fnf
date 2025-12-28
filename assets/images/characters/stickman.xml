@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="stickman.png">
+    <SubTexture name="stickman idle0000" x="0" y="0" width="431" height="514"/>
+    <SubTexture name="stickman idle0001" x="431" y="0" width="431" height="514"/>
+    <SubTexture name="stickman singLEFT0000" x="862" y="0" width="431" height="514"/>
+    <SubTexture name="stickman singDOWN0000" x="0" y="514" width="431" height="514"/>
+    <SubTexture name="stickman singUP0000" x="431" y="514" width="431" height="514"/>
+    <SubTexture name="stickman singRIGHT0000" x="862" y="514" width="431" height="514"/>
+</TextureAtlas>

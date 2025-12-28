@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="kaufmo.png">
+    <SubTexture name="kaufmo idle0000" x="0" y="0" width="474" height="474"/>
+    <SubTexture name="kaufmo idle0001" x="474" y="0" width="474" height="474"/>
+    <SubTexture name="kaufmo singLEFT0000" x="948" y="0" width="474" height="474"/>
+    <SubTexture name="kaufmo singDOWN0000" x="0" y="474" width="474" height="474"/>
+    <SubTexture name="kaufmo singUP0000" x="474" y="474" width="474" height="474"/>
+    <SubTexture name="kaufmo singRIGHT0000" x="948" y="474" width="474" height="474"/>
+</TextureAtlas>

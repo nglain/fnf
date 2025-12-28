@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character y="350" sprite="kaufmo" flipX="false" isPlayer="false" icon="kaufmo" color="#FFD700">
+    <anim name="idle" anim="kaufmo idle" fps="12" loop="true"/>
+    <anim name="singUP" anim="kaufmo singUP" fps="24" loop="false"/>
+    <anim name="singLEFT" anim="kaufmo singLEFT" fps="24" loop="false"/>
+    <anim name="singRIGHT" anim="kaufmo singRIGHT" fps="24" loop="false"/>
+    <anim name="singDOWN" anim="kaufmo singDOWN" fps="24" loop="false"/>
+</character>

@@ -1,6 +1,7 @@
 <!DOCTYPE codename-engine-week>
-<week name="WEEK D" chars="greenstick,bf,gf" sprite="daniel" color="00FF00">
+<week name="WEEK D" chars="kaufmo,bf,greenstick" sprite="daniel" color="FFD700">
 	<song>daniel</song>
 	<song>teo</song>
-	<song>lost</song>
+	<song>daniel4teo</song>
+	<song>kaufmo</song>
 </week>
