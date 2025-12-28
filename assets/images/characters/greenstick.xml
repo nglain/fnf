@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="greenstick.png">
+    <SubTexture name="greenstick idle0000" x="0" y="0" width="532" height="532"/>
+    <SubTexture name="greenstick idle0001" x="532" y="0" width="532" height="532"/>
+    <SubTexture name="greenstick singLEFT0000" x="1064" y="0" width="532" height="532"/>
+    <SubTexture name="greenstick singDOWN0000" x="0" y="532" width="532" height="532"/>
+    <SubTexture name="greenstick singUP0000" x="532" y="532" width="532" height="532"/>
+    <SubTexture name="greenstick singRIGHT0000" x="1064" y="532" width="532" height="532"/>
+</TextureAtlas>

@@ -1,0 +1,26 @@
+{
+  "audio_file": "Inst.ogg",
+  "duration_sec": 187.05,
+  "sample_rate": 22050,
+  "tempo": {
+    "method1_percussion": 129.2,
+    "method2_full": 129.2,
+    "method3_tempogram": 129.2,
+    "average": 129.2,
+    "selected": 129.2
+  },
+  "grid_ms": {
+    "1/4": 464.4,
+    "1/8": 232.2,
+    "1/16": 116.1
+  },
+  "onsets": {
+    "default_count": 735,
+    "sensitive_count": 808,
+    "strict_count": 420
+  },
+  "timing": {
+    "first_onset_ms": 70.0,
+    "recommended_offset_ms": 70.0
+  }
+}

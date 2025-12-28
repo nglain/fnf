@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+*.swp
+
+# Large binary files
+*.zip
+CodenameEngine/
+CodenameEngine-Build/
+
+# Claude memory
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# Temp
+*.tmp
+*.log
+CodenameEngine
