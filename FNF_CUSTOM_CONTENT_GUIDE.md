@@ -716,3 +716,90 @@ daniel    <- ваша песня
 
 *Документация создана на основе проекта WEEK D с персонажами Green Stick (opponent), BF (player), GF*
 *Фон: Minecraft Forest | Audio: DANIEL (129.2 BPM, offset 70ms)*
+
+---
+
+## 🎬 Динамическая смена фонов по времени
+
+### Stage с несколькими фонами
+
+```xml
+<!DOCTYPE codename-engine-stage>
+<stage zoom="0.9" name="mystage" folder="stages/mystage/">
+    <!-- Основной фон (видимый) -->
+    <sprite name="bg1" x="0" y="0" sprite="background1" visible="true"/>
+    
+    <!-- Альтернативный фон (скрытый) -->
+    <sprite name="bg2" x="0" y="0" sprite="background2" visible="false">
+        <anim name="idle" anim="anim" fps="10" loop="true"/>
+    </sprite>
+    
+    <girlfriend/>
+    <dad/>
+    <boyfriend/>
+</stage>
+```
+
+### HScript для переключения (songs/[song]/scripts/background_switch.hx)
+
+```haxe
+import flixel.FlxSprite;
+import flixel.text.FlxText;
+
+var bg1:FlxSprite;
+var bg2:FlxSprite;
+var timerText:FlxText;
+var bg2Active:Bool = false;
+
+// Тайминги в миллисекундах
+var BG2_START:Float = 93000;  // 1:33
+var BG2_END:Float = 155000;   // 2:35
+
+function onCreate() {
+    bg1 = PlayState.instance.stage.getNamedProp("bg1");
+    bg2 = PlayState.instance.stage.getNamedProp("bg2");
+    
+    // Таймер (опционально)
+    timerText = new FlxText(10, 10, 200, "0:00");
+    timerText.setFormat(null, 16, 0xFFFFFF, "left");
+    timerText.scrollFactor.set(0, 0);
+    PlayState.instance.add(timerText);
+}
+
+function onUpdate(elapsed:Float) {
+    var songPos = Conductor.songPosition;
+    
+    // Обновляем таймер
+    var seconds = Math.floor(songPos / 1000);
+    var mins = Math.floor(seconds / 60);
+    var secs = seconds % 60;
+    timerText.text = mins + ":" + (secs < 10 ? "0" : "") + secs;
+    
+    // Переключение фонов
+    if (songPos >= BG2_START && songPos < BG2_END) {
+        if (!bg2Active) {
+            bg1.visible = false;
+            bg2.visible = true;
+            bg2.animation.play("idle");
+            bg2Active = true;
+        }
+    } else if (bg2Active) {
+        bg2.visible = false;
+        bg1.visible = true;
+        bg2Active = false;
+    }
+}
+```
+
+### Конвертация времени
+
+| Формат | Миллисекунды |
+|--------|--------------|
+| 0:30 | 30000 |
+| 1:00 | 60000 |
+| 1:33 | 93000 |
+| 2:00 | 120000 |
+| 2:35 | 155000 |
+| 3:00 | 180000 |
+
+**Формула:** `минуты * 60000 + секунды * 1000`

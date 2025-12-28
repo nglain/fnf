@@ -1,7 +1,10 @@
 <!DOCTYPE codename-engine-stage>
 <stage zoom="0.9" name="daniel" folder="stages/daniel/" startCamPosY="600" startCamPosX="1000">
-	<!-- Animated Matrix Background -->
-	<sprite name="bg" x="-300" y="-200" sprite="intro_anim" scroll="0.8" scale="1.0">
+	<!-- Static Minecraft Background (default) -->
+	<sprite name="bg" x="-600" y="-300" sprite="bg" scroll="0.8" scale="1.5"/>
+	
+	<!-- Animated Matrix Background (hidden initially) -->
+	<sprite name="matrixBg" x="-300" y="-200" sprite="intro_anim" scroll="0.8" scale="1.0" visible="false">
 		<anim name="idle" anim="intro" fps="10" loop="true"/>
 	</sprite>
 
