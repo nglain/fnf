@@ -1,4 +1,3 @@
-import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.text.FlxText;
 
@@ -15,6 +14,18 @@ function onCreate() {
     // Получаем спрайты фонов
     minecraftBg = PlayState.instance.stage.getNamedProp("bg");
     matrixBg = PlayState.instance.stage.getNamedProp("matrixBg");
+    
+    // ПРИНУДИТЕЛЬНО скрываем матрицу в начале
+    if (matrixBg != null) {
+        matrixBg.visible = false;
+        matrixBg.alpha = 0;
+    }
+    
+    // Показываем Minecraft
+    if (minecraftBg != null) {
+        minecraftBg.visible = true;
+        minecraftBg.alpha = 1;
+    }
     
     // Создаём таймер
     timerText = new FlxText(10, 10, 200, "0:00");
@@ -35,18 +46,22 @@ function onUpdate(elapsed:Float) {
     
     // Переключение фонов
     if (songPos >= MATRIX_START && songPos < MATRIX_END) {
-        if (!matrixActive) {
+        if (!matrixActive && matrixBg != null) {
             // Включаем Matrix
             minecraftBg.visible = false;
+            minecraftBg.alpha = 0;
             matrixBg.visible = true;
+            matrixBg.alpha = 1;
             matrixBg.animation.play("idle");
             matrixActive = true;
         }
     } else {
-        if (matrixActive) {
+        if (matrixActive && minecraftBg != null) {
             // Возвращаем Minecraft
             matrixBg.visible = false;
+            matrixBg.alpha = 0;
             minecraftBg.visible = true;
+            minecraftBg.alpha = 1;
             matrixActive = false;
         }
     }
