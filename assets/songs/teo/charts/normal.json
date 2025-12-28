@@ -2589,7 +2589,7 @@
       "position": "dad",
       "type": 0,
       "characters": [
-        "greenstick"
+        "purplestick-opp"
       ]
     },
     {
@@ -5106,7 +5106,7 @@
       "position": "girlfriend",
       "type": 2,
       "characters": [
-        "gf"
+        "greenstick-gf"
       ]
     }
   ],

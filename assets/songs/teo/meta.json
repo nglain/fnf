@@ -1,8 +1,8 @@
 {
   "displayName": "TEO",
   "bpm": 152.0,
-  "icon": "greenstick",
-  "color": "#00FF00",
+  "icon": "purplestick",
+  "color": "#A020F0",
   "coopAllowed": true,
   "opponentModeAllowed": true
 }

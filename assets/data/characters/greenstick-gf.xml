@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character y="80" sprite="greenstick" flipX="false" isPlayer="false" isGF="true" icon="greenstick" color="#00FF00" scrollFactor="0.95">
+    <anim name="danceLeft" anim="greenstick idle" indices="0" fps="12" loop="false"/>
+    <anim name="danceRight" anim="greenstick idle" indices="1" fps="12" loop="false"/>
+</character>

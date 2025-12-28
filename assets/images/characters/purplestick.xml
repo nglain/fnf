@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="purplestick.png">
+    <SubTexture name="purplestick idle0000" x="0" y="0" width="532" height="532"/>
+    <SubTexture name="purplestick idle0001" x="532" y="0" width="532" height="532"/>
+    <SubTexture name="purplestick singLEFT0000" x="1064" y="0" width="532" height="532"/>
+    <SubTexture name="purplestick singDOWN0000" x="0" y="532" width="532" height="532"/>
+    <SubTexture name="purplestick singUP0000" x="532" y="532" width="532" height="532"/>
+    <SubTexture name="purplestick singRIGHT0000" x="1064" y="532" width="532" height="532"/>
+</TextureAtlas>

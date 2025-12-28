@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character y="350" sprite="purplestick" flipX="false" isPlayer="false" icon="purplestick" color="#A020F0">
+    <anim name="idle" anim="purplestick idle" fps="12" loop="true"/>
+    <anim name="singUP" anim="purplestick singUP" fps="24" loop="false"/>
+    <anim name="singLEFT" anim="purplestick singLEFT" fps="24" loop="false"/>
+    <anim name="singRIGHT" anim="purplestick singRIGHT" fps="24" loop="false"/>
+    <anim name="singDOWN" anim="purplestick singDOWN" fps="24" loop="false"/>
+</character>
