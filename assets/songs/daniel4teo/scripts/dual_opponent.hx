@@ -5,10 +5,10 @@ var purpleStick:FlxSprite;
 
 function onCreate() {
     trace("Creating purple stickman...");
-    
-    purpleStick = new FlxSprite(350, 150);
+
+    purpleStick = new FlxSprite(150, 180);
     purpleStick.frames = Paths.getSparrowAtlas("characters/purplestick");
-    
+
     if (purpleStick.frames != null) {
         purpleStick.animation.addByPrefix("idle", "purplestick idle", 12, true);
         purpleStick.animation.addByPrefix("singLEFT", "purplestick singLEFT", 24, false);
@@ -18,10 +18,12 @@ function onCreate() {
         purpleStick.animation.play("idle");
         purpleStick.scrollFactor.set(1, 1);
         purpleStick.antialiasing = true;
-        
-        // Добавляем в нужный слой
+        purpleStick.scale.set(0.9, 0.9);
+        purpleStick.updateHitbox();
+
+        // Add behind boyfriend but in front of stage
         PlayState.instance.insert(PlayState.instance.members.indexOf(PlayState.instance.boyfriendGroup), purpleStick);
-        trace("Purple stickman created!");
+        trace("Purple stickman created at x=150!");
     } else {
         trace("ERROR: Could not load purplestick frames!");
     }
