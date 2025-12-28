@@ -1,31 +1,20 @@
 import flixel.FlxSprite;
+import flixel.FlxG;
 import flixel.text.FlxText;
 
 var minecraftBg:FlxSprite;
 var matrixBg:FlxSprite;
 var timerText:FlxText;
 var matrixActive:Bool = false;
+var matrixCreated:Bool = false;
 
 // Тайминги (в миллисекундах)
 var MATRIX_START:Float = 93000;  // 1:33
 var MATRIX_END:Float = 155000;   // 2:35
 
 function onCreate() {
-    // Получаем спрайты фонов
+    // Получаем Minecraft фон
     minecraftBg = PlayState.instance.stage.getNamedProp("bg");
-    matrixBg = PlayState.instance.stage.getNamedProp("matrixBg");
-    
-    // ПРИНУДИТЕЛЬНО скрываем матрицу в начале
-    if (matrixBg != null) {
-        matrixBg.visible = false;
-        matrixBg.alpha = 0;
-    }
-    
-    // Показываем Minecraft
-    if (minecraftBg != null) {
-        minecraftBg.visible = true;
-        minecraftBg.alpha = 1;
-    }
     
     // Создаём таймер
     timerText = new FlxText(10, 10, 200, "0:00");
@@ -46,22 +35,31 @@ function onUpdate(elapsed:Float) {
     
     // Переключение фонов
     if (songPos >= MATRIX_START && songPos < MATRIX_END) {
-        if (!matrixActive && matrixBg != null) {
+        if (!matrixActive) {
+            // Создаём матрицу если ещё не создана
+            if (!matrixCreated) {
+                matrixBg = new FlxSprite(-300, -200);
+                matrixBg.frames = Paths.getSparrowAtlas("stages/daniel/intro_anim");
+                matrixBg.animation.addByPrefix("idle", "intro", 10, true);
+                matrixBg.scrollFactor.set(0.8, 0.8);
+                matrixBg.scale.set(1.0, 1.0);
+                PlayState.instance.insert(0, matrixBg);
+                matrixCreated = true;
+            }
+            
             // Включаем Matrix
             minecraftBg.visible = false;
-            minecraftBg.alpha = 0;
             matrixBg.visible = true;
-            matrixBg.alpha = 1;
             matrixBg.animation.play("idle");
             matrixActive = true;
         }
     } else {
-        if (matrixActive && minecraftBg != null) {
+        if (matrixActive) {
             // Возвращаем Minecraft
-            matrixBg.visible = false;
-            matrixBg.alpha = 0;
+            if (matrixBg != null) {
+                matrixBg.visible = false;
+            }
             minecraftBg.visible = true;
-            minecraftBg.alpha = 1;
             matrixActive = false;
         }
     }
